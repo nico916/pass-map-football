@@ -7,8 +7,8 @@ Application interactive pour visualiser les échanges de passes d’une équipe 
 ## 🛠️ Stack technique
 
 - **Python**
-- **pandas**, **numpy** : manipulation et calculs
-- **matplotlib**, **mplsoccer** : tracé du terrain et des flèches de passes
+- **pandas**, **numpy** : manipulation des données, calculs statistiques
+- **matplotlib**, **mplsoccer** : tracé du terrain, flèches, visualisation
 - **Streamlit** : interface web interactive
 
 ---
@@ -21,47 +21,66 @@ git clone https://github.com/nico916/pass-map-football.git
 cd pass-map-football
 ```
 
-(Optionnel mais recommandé) Créer un environnement virtuel
+### 2. (Optionnel mais recommandé) Créer un environnement virtuel
+```bash
 python -m venv env
-env\Scripts\activate      # Sous Windows
-#source env/bin/activate   # Sous macOS/Linux
+env\Scripts\activate       # Sous Windows
+# source env/bin/activate  # Sous macOS / Linux
+```
 
-3. Installer les dépendances
-
+### 3. Installer les dépendances
+```bash
 pip install -r requirements.txt
+```
 
-4. Lancer l’application
-
+### 4. Lancer l’application
+```bash
 streamlit run app.py
+```
 
-L’interface s’ouvrira automatiquement dans le navigateur.
-📂 Données utilisées
+🧠 L’interface se lancera automatiquement dans le navigateur.  
+🔁 Redémarrage rapide grâce au cache Streamlit.
 
-Les données proviennent du dépôt officiel StatsBomb Open Data.
-Le fichier events.json utilisé ici correspond à un match FC Barcelone vs Alavés – saison 2017-2018.
+---
 
-⚠️ Utilisation non commerciale uniquement, en accord avec les conditions d’usage de StatsBomb.
-💡 Fonctionnalités principales
+## 📂 Données utilisées
 
-  ✅ Carte des échanges de passes sur le terrain
+Les données proviennent du dépôt open-source **StatsBomb Open Data** :  
+📎 [https://github.com/statsbomb/open-data](https://github.com/statsbomb/open-data)
 
-  ✅ Position moyenne des titulaires
+Le fichier `events.json` correspond ici au match **FC Barcelone vs Alavés** – saison **2017-2018**.  
+⚠️ Utilisation **non commerciale uniquement**, conformément aux conditions d’usage.
 
-  ✅ Filtrage dynamique (ex : « ≥ 10 passes »)
-  
-  ✅ Analyse individuelle (partenaires préférés, distances moyennes…)
+---
 
+## 💡 Fonctionnalités principales
 
-📌 À venir / pistes d’amélioration:
-  
-  Analyse multi-matchs / comparaisons
+✅ **Carte interactive** des échanges de passes (avec flèches directionnelles)  
+✅ **Position moyenne** de chaque joueur (calculée à partir des passes)  
+✅ **Filtrage dynamique** (ex: « ≥ 10 passes » pour plus de lisibilité)  
+✅ **Analyse individuelle** par joueur :
+- Partenaires préférés
+- Nombre total de passes
+- Distance moyenne de transmission
 
-  Ajout de l’équipe adverse
+---
 
-  Filtrage temporel (0–15’, 15–30’, etc.)
-  
-  Indicateurs tactiques (centralité, changements d’aile, progressivité)
+## 📌 Pistes d’amélioration
 
-  Export PDF ou PNG
+- 🔁 Analyse **multi-matchs** ou comparaison inter-joueurs
+- ⚔️ Affichage de **l’adversaire** pour une vision des deux équipes
+- ⏱️ Filtrage **temporel** (ex: par période de jeu)
+- 🧠 Indicateurs tactiques avancés :
+  - Centralité du réseau de passes
+  - Switches of play (changements d’aile)
+  - Progressivité des transmissions
+- 🖼️ Export **PDF / PNG** pour intégration dans des rapports
+- 🤖 Intégration d’un **assistant IA** pour des requêtes naturelles (ex: "Quel joueur est le plus central ?")
 
-  Intégration d’un chatbot IA complémentaire
+---
+
+## 📄 Licence
+
+Projet personnel à but éducatif.  
+Code sous licence **MIT**.  
+Données sous conditions de StatsBomb.
