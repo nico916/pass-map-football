@@ -1,0 +1,23 @@
+# Environnements virtuels
+.venv/
+venv/env
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+
+# Fichiers système
+.DS_Store
+
+# Variables d'environnement
+.env
+
+# Fichiers liés à Streamlit
+.streamlit/config.toml
+
+# Cache de Streamlit
+.cache/
+.cache/*
+
+# Autres
+*.log
