@@ -1,23 +1,14 @@
-# Environnements virtuels
+# Ignorer l'environnement virtuel
+env/
 .venv/
-venv/env
 
-# Fichiers Python compilés
+# Fichiers Python inutiles
 __pycache__/
-*.py[cod]
+*.pyc
 
-# Fichiers système
-.DS_Store
+# Fichiers Streamlit
+.streamlit/
 
-# Variables d'environnement
-.env
-
-# Fichiers liés à Streamlit
-.streamlit/config.toml
-
-# Cache de Streamlit
-.cache/
-.cache/*
-
-# Autres
+# Autres fichiers à ignorer potentiellement
 *.log
+.DS_Store
