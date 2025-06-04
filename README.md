@@ -24,7 +24,7 @@ cd pass-map-football
 (Optionnel mais recommandé) Créer un environnement virtuel
 python -m venv env
 env\Scripts\activate      # Sous Windows
-# source env/bin/activate   # Sous macOS/Linux
+#source env/bin/activate   # Sous macOS/Linux
 
 3. Installer les dépendances
 
