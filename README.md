@@ -18,6 +18,7 @@ Application interactive pour visualiser les échanges de passes d’une équipe 
 ### 1. Cloner le dépôt
 ```bash
 git clone https://github.com/nico916/pass-map-football.git
+cd pass-map-football
 ```
 
 ### 2. (Optionnel mais recommandé) Créer un environnement virtuel
